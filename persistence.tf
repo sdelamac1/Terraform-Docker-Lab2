@@ -1,3 +1,4 @@
+# redis pa guardar datos en memoria (puerto 6379)
 resource "docker_container" "redis_dev" {
   name = "redis"
   image = "redis:latest"
@@ -12,6 +13,7 @@ networks_advanced {
     }
 }
 
+# postgres para la base de datos (puerto 5432)
 resource "docker_container" "postgres" {
     name = "postgres"
     image = "postgres:13-trixie"
